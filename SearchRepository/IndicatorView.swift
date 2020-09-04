@@ -9,8 +9,6 @@
 import UIKit
 
 extension NSObject {
-    // MARK: - Public Functions
-    // http://stackoverflow.com/a/31801454
     class var className: String {
         return NSStringFromClass(self).components(separatedBy: ".").last!
     }
@@ -22,7 +20,6 @@ extension NSObject {
 
 
 class BaseView: UIView {
-    // MARK: - Public Functions
     func addNibViewToSelf() {
         backgroundColor = .clear
         clipsToBounds = true
@@ -49,19 +46,16 @@ class IndicatorView: BaseView {
     @IBOutlet weak var indicator: UIActivityIndicatorView!
     private let tagNum = 100000;
     
-    // コードから初期化はここから
     override init(frame: CGRect) {
         super.init(frame: frame)
         comminInit()
     }
     
-    // Storyboard/xib から初期化はここから
     required init?(coder aDecoder: NSCoder) {
         super.init(coder: aDecoder)
         comminInit()
     }
     
-    // xibからカスタムViewを読み込んで準備する
     private func comminInit() {
         addNibViewToSelf()
         tag = tagNum

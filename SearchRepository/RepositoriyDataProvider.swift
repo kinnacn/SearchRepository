@@ -61,7 +61,7 @@ class RepositoriyDataProvider: NSObject {
                 self.delegate?.failureGetRepositoriyInfos(SearchRepositoryError.networkError)
             }
         }
-        // これ呼ばなきゃリストが更新されません
+        
         sessionTask?.resume()
     }
 }

@@ -35,8 +35,6 @@ struct Constans {
         static let openIssuesCount = "open_issues_count"
         static let fullName = "full_name"
         static let owner = "owner"
-        
-        
     }
     
     struct RepositoriyOwnerKeyName {

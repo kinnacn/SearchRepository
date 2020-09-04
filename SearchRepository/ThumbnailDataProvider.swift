@@ -50,7 +50,7 @@ class ThumbnailDataprovider: NSObject {
                 self.delegate?.failureGetThumbnail(SearchRepositoryError.networkError)
             }
         }
-        // これ呼ばなきゃリストが更新されません
+        
         sessionTask?.resume()
     }
 }
