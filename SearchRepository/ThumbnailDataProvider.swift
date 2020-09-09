@@ -30,8 +30,9 @@ class ThumbnailDataprovider: NSObject {
         let config = URLSessionConfiguration.default
         let session = URLSession(configuration: config)
         
+        let request = URLRequest(url: url)
         
-        sessionTask = session.dataTask(with: url) { (data, response, error) in
+        sessionTask = session.dataTask(with: request) { (data, response, error) in
             session.invalidateAndCancel()
             
             if let _ = error {
